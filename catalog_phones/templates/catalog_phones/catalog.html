@@ -1,0 +1,24 @@
+{% extends "catalog_phones/base.html" %}
+
+{% load static %}
+
+{% block title %}<h4>{{title}}</h4>{% endblock %}
+
+{% block content %}
+<h1>{{main}}</h1>
+
+<p> Сортировать по: <span>названию</span> <span> начиная с дешевых </span> <span>начиная с дорогих</span> </p>
+
+<div>
+  <ul>
+    {% for fon in phones %}
+    <ol>
+      <h2>{{fon.name}}</h2>
+      <h4>Стоимость: {{fon.price}}</h4>
+      <img src="{{fon.image}}">
+
+    </ol>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

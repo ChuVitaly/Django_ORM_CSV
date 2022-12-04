@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{% block top_filter %}
+<ul>
+    {% for f in filter %}
+    <li>{{ f }}</li>
+    {% endfor %}
+</ul>
+{% endblock top_filter %}
+
+{% block content %}
+<ul>
+    {% for f in filter %}
+    <li>{{ f }}</li>
+    {% endfor %}
+
+</ul>
+{% endblock %}
+</body>
+</html>
