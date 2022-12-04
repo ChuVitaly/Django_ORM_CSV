@@ -19,5 +19,5 @@ from catalog_phones.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name='home'),
 ]
