@@ -1,25 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'catalog_phones/css/style.css' %}" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; chrset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-{% block top_filter %}
-<ul>
-    {% for f in filter %}
-    <li>{{ f }}</li>
-    {% endfor %}
-</ul>
-{% endblock top_filter %}
 
 {% block content %}
-<ul>
-    {% for f in filter %}
-    <li>{{ f }}</li>
-    {% endfor %}
 
-</ul>
 {% endblock %}
 </body>
 </html>
