@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='home'),
     path('catalog/', create_page_catalog),
+    path('catalog/<int:phones_id>/', show_product),
+
 ]
