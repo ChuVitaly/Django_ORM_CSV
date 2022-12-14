@@ -1,0 +1,29 @@
+{% extends "catalog_phones/base.html" %}
+
+{% load static %}
+
+{% block title %}<h4>{{title}}</h4>{% endblock %}
+
+{% block content %}
+<h1>{{main}}</h1>
+
+
+<div class="model_phone">
+  <ul>
+
+    {% for fon in phones %}
+      <ol><h2>{{fon}}</h2></ol>
+    {% endfor %}
+    {% for i in prices %}
+      <ol><h4>Стоимость: {{i}}</h4></ol>
+      {% endfor %}
+
+
+
+<!--      {% for i in prices %}-->
+<!--      <ol><h4>Стоимость: {{i}}</h4></ol>-->
+<!--      <img src="{{fon.image}}">-->
+<!--    {% endfor %}-->
+    </ul>
+</div>
+{% endblock %}
